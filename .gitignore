@@ -1,0 +1,21 @@
+# Dependencies
+node_modules
+dist
+.DS_Store
+
+# Environment & local files
+*.local
+.env
+.env.*
+
+# Archives & Temporary files
+*.zip
+*.tar.gz
+Sarita Pujari Portfolio .zip
+extracted_portfolio
+__MACOSX
+src_manifest.json
+
+# Tooling & Deployments
+.vercel
+.agents

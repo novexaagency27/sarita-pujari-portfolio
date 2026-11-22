@@ -1,0 +1,19 @@
+# Ignore build directories and caches
+dist
+.cache
+.vite
+
+# Ignore archives and large files
+*.zip
+*.tar.gz
+Sarita Pujari Portfolio .zip
+extracted_portfolio
+__MACOSX
+src_manifest.json
+
+# Ignore dependencies and dev tools
+node_modules
+.git
+.agents
+*.local
+.env*

@@ -1,0 +1,149 @@
+@import "tailwindcss";
+
+@theme {
+  --color-wine-main: #581822;
+  --color-wine-dark: #3A0D14;
+  --color-wine-accent: #78222E;
+  --color-wine-light: #943341;
+  --color-milk-tea: #EFE6DD;
+  --color-latte-card: #E5D7CB;
+  --color-latte-border: #D4C3B3;
+  --color-cream-ivory: #FBF7F2;
+  --color-blush-petal: #F3D8D3;
+  --color-blush-soft: #F9EBE8;
+  --color-espresso: #240B10;
+  --color-espresso-muted: #6B4E54;
+
+  --font-display: "Syne", "Playfair Display", system-ui, sans-serif;
+  --font-serif: "Italiana", "Playfair Display", Georgia, serif;
+  --font-script: "Caveat", cursive;
+  --font-sans: "Plus Jakarta Sans", "Manrope", system-ui, -apple-system, sans-serif;
+  --font-mono: "DM Mono", Menlo, monospace;
+}
+
+@layer base {
+  html {
+    background-color: #EFE6DD;
+    color: #240B10;
+    font-family: var(--font-sans);
+    letter-spacing: -0.01em;
+    overflow-x: hidden;
+    max-width: 100vw;
+  }
+
+  body {
+    overflow-x: hidden;
+    width: 100%;
+    max-width: 100vw;
+    background-color: #EFE6DD;
+  }
+
+  h1, h2, h3, h4, p, span, a {
+    overflow-wrap: break-word;
+  }
+
+  ::selection {
+    background-color: #581822;
+    color: #FBF7F2;
+  }
+}
+
+.font-display {
+  font-family: var(--font-display);
+}
+
+.font-serif {
+  font-family: var(--font-serif);
+}
+
+.font-script {
+  font-family: var(--font-script);
+}
+
+/* Washi Tape styling */
+.washi-tape {
+  background: rgba(245, 238, 230, 0.85);
+  backdrop-filter: blur(2px);
+  border-left: 2px dashed rgba(88, 24, 34, 0.2);
+  border-right: 2px dashed rgba(88, 24, 34, 0.2);
+  box-shadow: 0 2px 6px rgba(36, 11, 16, 0.08);
+}
+
+/* Viral Aesthetic Fluid Typography - Scaled Safely for 320px+ Screens */
+.hero-clamp-title {
+  font-size: clamp(2rem, 7.5vw, 8.5rem);
+  line-height: 0.92;
+  letter-spacing: -0.035em;
+  word-break: break-word;
+}
+
+.section-clamp-heading {
+  font-size: clamp(1.65rem, 5vw, 5.2rem);
+  line-height: 0.98;
+  letter-spacing: -0.025em;
+  word-break: break-word;
+}
+
+.project-clamp-title {
+  font-size: clamp(1.3rem, 3vw, 3rem);
+  line-height: 1.08;
+  letter-spacing: -0.02em;
+  word-break: break-word;
+}
+
+/* Double outline text effect */
+.text-outline-wine {
+  -webkit-text-stroke: 1.5px #581822;
+  color: transparent;
+}
+
+.text-outline-cream {
+  -webkit-text-stroke: 1.5px rgba(251, 247, 242, 0.6);
+  color: transparent;
+}
+
+/* Marquee infinite scroll animation */
+@keyframes marquee {
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+.animate-marquee {
+  display: flex;
+  width: max-content;
+  animation: marquee 28s linear infinite;
+}
+
+.animate-marquee:hover {
+  animation-play-state: paused;
+}
+
+/* Reduced motion accessibility */
+@media (prefers-reduced-motion: reduce) {
+  *, ::before, ::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* Custom aesthetic scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: #EFE6DD;
+}
+::-webkit-scrollbar-thumb {
+  background: #D4C3B3;
+  border-radius: 9999px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #581822;
+}
